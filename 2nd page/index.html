@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graphic Design Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Portfolio Showcase</h1>
+      <p>Creative Graphic Designer </p>
+    </div>
+  </header>
+
+  <!-- Portfolio Gallery -->
+  <section class="portfolio">
+    <h2>My Projects</h2>
+    <p style="text-align: center;"> <b> Click on the images to see Full Details. </b> </p> <br>
+    <div class="gallery">
+      <div class="project" onclick="openLightbox('./11.png', './1.png')">
+        <img src="./1.png" alt="Project 1">
+        <div class="overlay">Memphis Grizzlies Logo</div>
+      </div>
+      <div class="project" onclick="openLightbox('output2.jpg', 'source2.jpg')">
+        <img src="output2.jpg" alt="Project 2">
+        <div class="overlay">Project 2 - Poster Design</div>
+      </div>
+      <div class="project" onclick="openLightbox('output3.jpg', 'source3.jpg')">
+        <img src="output3.jpg" alt="Project 3">
+        <div class="overlay">Project 3 - Branding</div>
+      </div>
+      <div class="project" onclick="openLightbox('output4.jpg', 'source4.jpg')">
+        <img src="output4.jpg" alt="Project 4">
+        <div class="overlay">Project 4 - Social Media Post</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <h2>Let's Connect</h2>
+  <div class="social-links" style="text-align: center;">
+    <a href="https://wa.link/da4d5h" target="_blank"><img  src="./whatsapp.png" style="width: 80px; height: 80px;" alt="WhatsApp" /></a>
+      <a href="https://www.facebook.com/msaran.qaisrani.9" target="_blank"><img src="./facebook.png" style="width: 80px; height: 80px;" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/saran_qaisrani" target="_blank"><img src="./insta.png" style="width: 80px; height: 80px;"  alt="Instagram" /></a>
+        
+  </div>
+
+  <!-- Contact Section -->
+  <footer class="contact">
+    ⭐⭐⭐⭐⭐
+    <p class="copyright">&copy; 2025 Muhammad Saran. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightboxOutput" src="" alt="Output Image">
+      <img id="lightboxSource" src="" alt="Source Image">
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(output, source) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightboxOutput").src = output;
+      document.getElementById("lightboxSource").src = source;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
